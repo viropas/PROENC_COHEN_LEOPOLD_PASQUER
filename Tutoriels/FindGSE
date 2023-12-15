@@ -16,3 +16,12 @@ q("no")
 R
 install.packages("devtools")
 devtools::install_github("schneebergerlab/findGSE")
+
+#2 After getting .histo file and installing findGSE, you can use the following command under R environment
+
+R
+library("findGSE")
+findGSE(histo="test_21mer.histo", sizek=21, outdir="hom_test_21mer")
+
+#where 21 is the length of k-mers
+#Results will be printed like "Genome size estimate for test_21mer.histo: 1498918 bp." For more information about estimation, one can check the .txt and .pdf files in the output dir.
