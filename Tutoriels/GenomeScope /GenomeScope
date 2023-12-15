@@ -1,1 +1,9 @@
+#First you need to know the size of your reads. If not, check the file "Reads length" before using GenomeScope
 
+# Once you know the length of the reads, there are 2 different ways to use GenomeScope.
+
+#1 Running GenomeScope Online. It is easy to use and offers a good web interface 
+
+Link : http://genomescope.org/
+
+#2 Running GenomeScope on the Command Line
