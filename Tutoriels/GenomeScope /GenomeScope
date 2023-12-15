@@ -6,4 +6,5 @@
 
 Link : http://genomescope.org/
 
-#2 Running GenomeScope on the Command Line
+#2 Running GenomeScope on the Command Line. You can run the commands with the R script. Make sure that the R script is in your PATH
+
