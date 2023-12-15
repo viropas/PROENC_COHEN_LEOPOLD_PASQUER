@@ -1,1 +1,18 @@
+#0 First of all, install dependencies required by findGSE under R, if you do not have them yet. Open a terminal,
 
+ R
+ install.packages("pracma")
+ install.packages("fGarch")
+ q("no")
+
+#1 Install under R
+
+R
+install.packages("findGSE-master.tar.gz")
+q("no")
+
+#You can also install it directly from GitHub
+
+R
+install.packages("devtools")
+devtools::install_github("schneebergerlab/findGSE")
