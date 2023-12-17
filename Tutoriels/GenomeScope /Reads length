@@ -1,1 +1,9 @@
+#We will use the tool Seqkit to know your reads length. You need to install it first.
 
+conda install -c bioconda seqkit
+
+#You will use this tool for your fastq file so make sure the format is valid. Then run the following command which will gives stats about your file.
+
+seqkit stats your-fastq-file
+
+#The output is a table. You will find the length of the reads in the column "avg_len"
