@@ -8,3 +8,12 @@ Link : http://genomescope.org/
 
 #2 Running GenomeScope on the Command Line. You can run the commands with the R script. Make sure that the R script is in your PATH
 
+#2.1 Run the following command
+$ Rscript genomescope.R histogram_file k-mer_length read_length output_dir [kmer_max] [verbose]
+
+#The histogram_file (from jellyfish), k-mer_length, read_length, and output_dir are required parameters. The optional parameter kmer_max specifies the cutoff for excluding high frequency kmers from the analysis. We recommend setting kmer_max=1000, but it depends on the specific characteristics of your data. If the optional parameter verbose is set to 1, then GenomeScope will output more details on the model fitting as different parameters are used. The output plots and a text file of the inferred genome characteristics will be output to the specified output_dir directory.
+
+#2.2 Then run this command 
+$ /PATH/TO/Rscript /PATH/TO/genomescope.R ara_F1_21.hist 21 150 output
+
+#The plots and the full results will be in output directory.
