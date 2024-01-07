@@ -10,3 +10,19 @@ plot(dataframek[1:200,], type="l") #plots the data points 1 through 200 in the d
 ```R
 plot(dataframe19[2:200,], type="l")
 ```
+#To determine the cut off points in the single copy region, we need to see the actual data point positions in the graph. In the initial examination the peak starts from the 2nd data point onward. So we will disregard the first data point in determining the single copy region.
+#Now using R we will re-plot the graph to determine the single copy region. Then we will include the points for clarity on the same graph.
+
+```R
+plot(dataframek[2:100,], type="l") #plot line graph 
+points(dataframek[2:100,]) #plot the data points from 2 through 100
+```
+#You need now to determine the single region copy. This region is located where there are the most variations on the previous graph.
+#In our example, this region is between points 6 and 40
+
+#Assuming the total number of data points is known, we can now calculate the total k-mers in the distribution.
+
+```R
+sum(as.numeric(dataframe19[2:9325,1]*dataframe19[2:9325,2]))
+```
+
