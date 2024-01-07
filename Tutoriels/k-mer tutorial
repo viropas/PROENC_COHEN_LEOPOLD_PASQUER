@@ -1,1 +1,2 @@
-
+#Once you have the histo file we will use R studio to visualize and to plot the data.  
+# Using the following command, we will load the data from the out_19mer.histo file in to a data frame called dataframe.
