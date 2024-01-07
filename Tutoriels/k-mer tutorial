@@ -32,3 +32,17 @@ sum(as.numeric(dataframe19[2:9325,1]*dataframe19[2:9325,2]))
 ```R
 dataframek[20:30,]
 ```
+#In our case, the peak is at 23. So the Genome Size can be estimated as:
+
+```R
+sum(as.numeric(dataframek[total number of points execpt first,1]*dataframek[total number of points execpt first,2]))/23
+```
+#Since we have a nice curve, we can compare our curve to a theoretical curve, which is the Poission distribution.
+
+```R
+singleC <- sum(as.numeric(dataframek[6:40,1]*dataframek[6:40,2]))/23
+poisdtb <- dpois(1:100,12)*singleC
+plot(poisdtb, type='l', lty=2, col="green")
+lines(dataframek[1:100,12] * singleC, type = "l", col=3)#, Ity=2)
+lines(dataframek[1:100,],type= "l")
+```
