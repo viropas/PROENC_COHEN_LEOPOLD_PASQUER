@@ -10,3 +10,12 @@ Given a fastq file, here is an example for counting k-mers with jellyfish:
 jellyfish count -t 8 -C -m k -s 5G -o kmer_out --min-qual-char=? path/to/fastq/file
 ```
 k is the size oh k-mers. Here are the options used in the counting k-mers:
+```shell
+-t    -treads=unit32       Number of treads to be used in the run. eg: 1,2,3,..etc.
+-C    -both-strands        Count both strands
+-m    -mer-len=unit32      Length of the k-mer    
+-s    -size=unit32         Hash size / memory allocation  
+-o    -output=string       Output file name
+--min-quality-char         Base quality value. Version 2.2.3 of Jellyfish uses the “Phred” score, where "?" = 30
+```
+
