@@ -7,6 +7,7 @@ plot(dataframek[1:200,], type="l") #plots the data points 1 through 200 in the d
 ```
 # This will create a line graph using the first 200 data points
 #In general, very low frequency k-mers represent high numbers that would skew the y –axis. If we look at the data points in the histogram file, we can see that the very first data point has a exceptionally high value than the next (second) data point. So we remove just the first line and re-plot using R. From now on we will disregard the first data point for our calculations.
+
 ```R
 plot(dataframe19[2:200,], type="l")
 ```
@@ -25,4 +26,9 @@ points(dataframek[2:100,]) #plot the data points from 2 through 100
 ```R
 sum(as.numeric(dataframe19[2:9325,1]*dataframe19[2:9325,2]))
 ```
+#From the plotted graph we can get an idea where the peak position lies, and it should be between the points 20 and 30 according to our example.
+#Now to determine the peak, thus, we need to look at the actual data points in that region
 
+```R
+dataframek[20:30,]
+```
