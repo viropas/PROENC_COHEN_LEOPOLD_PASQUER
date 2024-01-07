@@ -1,2 +1,12 @@
 #Once you have the histo file we will use R studio to visualize and to plot the data.  
-# Using the following command, we will load the data from the out_19mer.histo file in to a data frame called dataframe.
+# Using the following command, we will load the data from the kmer_out.histo file in to a data frame called dataframek.
+
+```R
+dataframek <- read.table("kmer_out.histo") #load the data into dataframek
+plot(dataframek[1:200,], type="l") #plots the data points 1 through 200 in the dataframek using a line
+```
+# This will create a line graph using the first 200 data points
+#In general, very low frequency k-mers represent high numbers that would skew the y –axis. If we look at the data points in the histogram file, we can see that the very first data point has a exceptionally high value than the next (second) data point. So we remove just the first line and re-plot using R. From now on we will disregard the first data point for our calculations.
+```R
+plot(dataframe19[2:200,], type="l")
+```
