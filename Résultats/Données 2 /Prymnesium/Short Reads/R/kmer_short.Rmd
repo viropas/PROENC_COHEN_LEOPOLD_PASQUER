@@ -1,0 +1,75 @@
+---
+title: "Prymnesium-Ilumina-R"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+dataframe <- read.table("kmer_short_out.histo") #load the data into dataframe
+colnames(dataframe)[colnames(dataframe) == "V1"] <- "Number of kmer"
+colnames(dataframe)[colnames(dataframe) == "V2"] <- "Frequency"
+nb_obs <- nrow(dataframe)
+```
+
+We plot the data points 1 through 200 in the dataframe using a line
+
+```{r}
+plot(dataframe[1:200,], type="l")
+```
+
+We take out the first measurements which are errors :
+
+```{r}
+nb_begin <- 14
+nb_end <- 200
+plot(dataframe[nb_begin:nb_end,], type="l") # more acceptable graph
+points(dataframe[nb_begin:nb_end,]) # plot the data points from nb_begin through nb_end
+```
+
+Then, we calculate the total number of k-mer :
+
+```{r}
+k_mer <- sum(as.numeric(dataframe[nb_begin:nb_obs,1]*dataframe[nb_begin:nb_obs,2]))
+print(paste("Total number of kmer =", k_mer))
+```
+
+Find the argmax of the k-mer frequencies :
+
+```{r}
+argmax <- which.max(dataframe[nb_begin:nb_obs, ]$Frequency) + nb_begin - 1
+print(paste("Argmax = ", argmax))
+```
+
+Genome size calculation :
+
+```{r}
+genome_size <- k_mer/argmax
+print(paste("Genome size =", genome_size, "b"))
+```
+
+Single copy size estimation:
+
+```{r}
+sc_begin <- 17 # estimated by observing the curve
+sc_end <- 120 # estimated by observing the curve
+single_copy_size <- sum(as.numeric(dataframe[sc_begin:sc_end,1]*dataframe[sc_begin:sc_end,2]))/argmax
+proportion <- single_copy_size/genome_size
+print(paste("Single Copy Size = ", single_copy_size))
+print(paste("Proportion = ", proportion*100, "%"))
+```
+
+Comparison with a Poisson's distribution
+
+```{r}
+singleC <- sum(as.numeric(dataframe[sc_begin:sc_end,1]*dataframe[sc_begin:sc_end,2]))/argmax
+poisdtb <- dpois(1:nb_end,argmax)*singleC
+plot(poisdtb, type='l', lty=2, col="green")
+lines(dataframe[1:nb_end,argmax] * singleC, type = "l", col=3)#, Ity=2)
+lines(dataframe[1:nb_end,],type= "l")
+```
+
+
