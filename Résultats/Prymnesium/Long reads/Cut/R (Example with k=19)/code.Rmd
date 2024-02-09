@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
-dataframe <- read.table("kmer_cut_out.histo") #load the data into dataframe
+dataframe <- read.table("21mer_cut.histo") #load the data into dataframe
 colnames(dataframe)[colnames(dataframe) == "V1"] <- "Number of kmer"
 colnames(dataframe)[colnames(dataframe) == "V2"] <- "Frequency"
 nb_obs <- nrow(dataframe)
