@@ -7,7 +7,7 @@ To use the tools,one needs to input a k value and a corresponding k-mer histo fi
 
 Given a fastq file, here is an example for counting k-mers with jellyfish:
 ```shell
-jellyfish count -t 8 -C -m k -s 5G -o kmer_out --min-qual-char="?" path/to/fastq/file
+jellyfish count -t 8 -C -m k -s 2G -o kmer_out --min-qual-char="?" path/to/fastq/file
 ```
 k is the size of k-mers. Here are the options used in the counting k-mers:
 ```shell
