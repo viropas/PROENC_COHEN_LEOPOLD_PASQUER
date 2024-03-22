@@ -1,6 +1,6 @@
 | Tools | Functioning/Comments|
 |-------|--------------------|
-|findGSE| Iterative approach with an asymmetric normal distribution model |
+|findGSE| Iterative approach with an asymmetric normal distribution model|
 |GenomeScope| Fits a mixture model of four negative binomial distributions to k-mer profiles |
 |R analysis| Manual k-mers histogram curve analysis |
 |Covest| Misc library not updated in code |
