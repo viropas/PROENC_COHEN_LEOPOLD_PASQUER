@@ -6,4 +6,4 @@
 |Covest| misc library not updated in code |
 |Kmergenie| Compile issues |
 |KAT (K-mer Analysis Toolkit)| Installation too restrictive, many prerequisites|
-|GCE (genomic charactor estimator)| Package trop compliqué à télécharger et besoin de convertir de fichiers txt en makefile |
+|GCE (genomic charactor estimator)| Package too complicated to download and need to convert from txt files to makefile |
