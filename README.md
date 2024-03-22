@@ -1,4 +1,4 @@
-# Projet_Ifremer
+# Projet_Ifreme
 This Github regroups a list of tools and tutorials for estimating a genome size. One can find examples and results in the dedicated sections. 
 
 K-mer distribution is the first step leading to the estimation of the genome size.
