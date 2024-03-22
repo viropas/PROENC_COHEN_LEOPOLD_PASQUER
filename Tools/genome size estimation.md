@@ -1,4 +1,4 @@
-| Tools | Functioning/Commentary|
+| Tools | Functioning/Comments|
 |-------|--------------------|
 |findGSE| Iterative approach with an asymmetric normal distribution model |
 |GenomeScope| Fits a mixture model of four negative binomial distributions to k-mer profiles |
