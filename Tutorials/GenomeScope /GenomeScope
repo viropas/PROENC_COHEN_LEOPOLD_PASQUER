@@ -6,7 +6,7 @@
 
 Link : http://genomescope.org/
 
-#2 Running GenomeScope on the Command Line. You can run the commands with the R script. Make sure that the R script is in your PATH
+#2 Running GenomeScope on the Command Line. You can run the commands with the R script (available here https://github.com/schatzlab/genomescope). Make sure that the R script is in your PATH
 
 #2.1 Run the following command
 $ Rscript genomescope.R histogram_file k-mer_length read_length output_dir [kmer_max] [verbose]
